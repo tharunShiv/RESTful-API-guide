@@ -36,3 +36,14 @@ The JSON data will be transfered here for request and response.
    - Self descriptive messages, links to further resources returned from server are essential
 6. Code on Demand (Optional)
    Executable code could be transferred.
+
+## First plan
+
+1. Plan the endpoints, with the methods.
+2. Mark the protected routes
+
+## install dependencies
+
+## server.js - creating the server
+
+## app.js - spinning up the express application

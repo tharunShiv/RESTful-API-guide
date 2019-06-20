@@ -1,0 +1,22 @@
+{
+  "name": "restful-api-guide",
+  "version": "1.0.0",
+  "description": "- When we want to just communicate data with the server and not HTML.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tharunShiv/RESTful-API-guide.git"
+  },
+  "author": "TharunShiv",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tharunShiv/RESTful-API-guide/issues"
+  },
+  "homepage": "https://github.com/tharunShiv/RESTful-API-guide#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
