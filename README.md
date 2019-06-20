@@ -52,4 +52,18 @@ The JSON data will be transfered here for request and response.
 
 Some packages:
 
-nodemon, morgan - logging package
+nodemon, morgan - logging package, body-parser
+
+## Handling request body, handle CORS
+
+What are CORS?
+Cross - origin resource sharing
+
+If the client and server are on the same server, like say localhost:3000
+Then it will succeed.
+But for a restful API, the client and server has different origins, so the request will fail.
+So for restful Api, we want to allow access.
+
+So we have to disable this mechanism , by sending some headers to the server from the client
+
+## Maintain a documentation, and clearly state about the data and data format. That is the request and response data

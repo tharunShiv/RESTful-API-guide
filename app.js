@@ -1,18 +1,36 @@
 const express = require("express");
 const app = express();
 const morgan = require("morgan");
+const bodyParser = require("body-parser");
 
 const productRoutes = require("./api/routes/products");
 const orderRoutes = require("./api/routes/orders");
 
 // to log the incoming requests
 app.use(morgan("dev"));
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-// app.use((req, res, next) => {
-//   res.status(200).json({
-//     message: "It works"
-//   });
-// });
+// appending the headers before we send any response
+app.use((req, res, next) => {
+  // the second paramter contains the urls to be allowed
+  res.header("Access-Control-Allow-Origin", "*");
+  // kind of headers to accept
+  // also can use * for second parameter here
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization"
+  );
+  // OPTIONS when the client wants to know the available
+  // methods
+  if (req.method == "OPTIONS") {
+    // add an additional headers
+    // mention the methods we're supporting
+    res.header("Acces-Control-Allow-Methods", "PUT, POST, PATCH, DELETE, GET");
+    return res.status(200).json({});
+  }
+  next();
+});
 
 app.use("/products", productRoutes);
 app.use("/orders", orderRoutes);
