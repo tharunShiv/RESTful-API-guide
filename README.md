@@ -47,3 +47,9 @@ The JSON data will be transfered here for request and response.
 ## server.js - creating the server
 
 ## app.js - spinning up the express application
+
+## add the routes
+
+Some packages:
+
+nodemon, morgan - logging package
