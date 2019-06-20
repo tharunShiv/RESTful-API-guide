@@ -2,10 +2,26 @@ const express = require("express");
 const app = express();
 const morgan = require("morgan");
 const bodyParser = require("body-parser");
+const mongoose = require("mongoose");
 
 const productRoutes = require("./api/routes/products");
 const orderRoutes = require("./api/routes/orders");
 
+mongoose
+  .connect(
+    "mongodb+srv://tharun:" +
+      process.env.MONGO_ATLAS_PW +
+      "@cluster0-i3r8p.mongodb.net/test?retryWrites=true&w=majority",
+    { useNewUrlParser: true }
+  )
+  .then(res => console.log("res: " + res))
+  .catch(err => console.log("err: " + err));
+
+console.log(
+  "mongodb+srv://tharun:" +
+    process.env.MONGO_ATLAS_PW +
+    "@cluster0-i3r8p.mongodb.net/test?retryWrites=true&w=majority"
+);
 // to log the incoming requests
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
