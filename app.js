@@ -22,6 +22,8 @@ console.log(
     process.env.MONGO_ATLAS_PW +
     "@cluster0-i3r8p.mongodb.net/test?retryWrites=true&w=majority"
 );
+mongoose.Promise = global.Promise;
+
 // to log the incoming requests
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));

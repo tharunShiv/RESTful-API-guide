@@ -69,3 +69,7 @@ So we have to disable this mechanism , by sending some headers to the server fro
 ## Maintain a documentation, and clearly state about the data and data format. That is the request and response data
 
 ## setup the database
+
+## fill in the logic to the routes
+
+## Add validation
