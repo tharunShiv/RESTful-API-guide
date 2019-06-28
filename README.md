@@ -103,3 +103,15 @@ steps:
 2. implement signup, use bcrypt
 3. implement login
 4. use jsonwebtoken npm package for JWT
+5. return JWT token on login
+
+## Protect routes using JWT
+
+using middlewares that checks for a valid token and continue only if the token is valid
+
+Send the token in header
+with
+
+Key --------------------- Value
+
+Authorization ------------ Bearer [jwt]
