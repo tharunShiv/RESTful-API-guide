@@ -78,3 +78,28 @@ So we have to disable this mechanism , by sending some headers to the server fro
 
 ## Image Uploading - using multer
 
+## Authentication
+
+How is works?
+
+Client ----------------- Server
+
+Client sends auth data (email, pwd) to server for registration or login
+
+Then in a normal node app we return a session, but we dont use sessions in restapi servers, and even mobile appps cannot use sessions, we will actually return a Token.
+This token can be stored by our clients, and the client uses this token for future requests, we verify the token and serve the request
+
+This token is a JWT : JSON WEB TOKEN
+Its a JSON Data + Signature = JWT
+
+This signature can be verified
+
+We will use a private+public key combination.
+JSON data is not encryptied
+
+steps:
+
+1. start by creating a user model
+2. implement signup, use bcrypt
+3. implement login
+4. use jsonwebtoken npm package for JWT
