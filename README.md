@@ -115,3 +115,5 @@ with
 Key --------------------- Value
 
 Authorization ------------ Bearer [jwt]
+
+## Transfer the logic to Controllers
