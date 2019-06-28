@@ -73,3 +73,8 @@ So we have to disable this mechanism , by sending some headers to the server fro
 ## fill in the logic to the routes
 
 ## Add validation
+
+## Linking the models if necessary and using .populate()
+
+## Image Uploading - using multer
+
